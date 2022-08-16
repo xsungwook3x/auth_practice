@@ -26,7 +26,7 @@ public class AuthService {
     private final TokenProvider tokenProvider;
 
     public void signup(MemberDTO memberDTO){
-        if(memberRepository.existByEmail(memberDTO.getEmail())){
+        if(memberRepository.existsByEmail(memberDTO.getEmail())){
             throw new RuntimeException("이미 가입되어있습니다.");
         }
         String tmpPassword = passwordEncoder.encode(memberDTO.getPassword());//인코딩
@@ -35,8 +35,8 @@ public class AuthService {
 
     }
 
-    public TokenDTO login(MemberDTO memberDTO){
-        UsernamePasswordAuthenticationToken authenticationToken = memberDTO.toAuthentication();
+    public TokenDTO login(String email,String password){
+        UsernamePasswordAuthenticationToken authenticationToken = new UsernamePasswordAuthenticationToken(email,password);
 
         Authentication authentication = managerBuilder.getObject().authenticate(authenticationToken);
 

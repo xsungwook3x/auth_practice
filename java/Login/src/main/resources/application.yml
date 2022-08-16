@@ -22,7 +22,7 @@ spring:
     show-sql: true
 
 jwt:
-  secret:
+  secret: MyFirstSecuritySecreatKeyisFuckingshitokeyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9
 
 logging:
   level:

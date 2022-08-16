@@ -25,9 +25,4 @@ public class MemberDTO {
 
     private Role role;
 
-
-
-    public UsernamePasswordAuthenticationToken toAuthentication() {
-        return new UsernamePasswordAuthenticationToken(email, password);
-    }
 }
