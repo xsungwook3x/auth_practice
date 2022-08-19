@@ -23,13 +23,13 @@ function Login(){
                     />
                 </div>
                 <div className="d-grid gap-2 mt-3">
-                    <Button variant="primary">Submit</Button>
+                    <Button variant="primary">Login</Button>
                 </div>
                 <p className="forgot-password text-right mt-2">
                     Forgot <a href="#">password?</a>
                 </p>
                 <p className="new-account text-right mt-2">
-                    <a href="#">You don't have a account?</a>
+                    <a href="/signup">You don't have a account?</a>
                 </p>
             </div>
         </form>
